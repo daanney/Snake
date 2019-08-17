@@ -8,6 +8,14 @@ You can start the game to play with arrow keys by running:
 Or let the AI play with following:
 > python3 AIUI.py
 
+** NOTE **
+In order to run the AI you need to make sure to train your model. In the repo are my training set. if you want to create your own, just delete the files (*.td.*). For the first run, you need to comment the line to loadTDX, as it won't exist .. :-)
+> SnakeNN2.py
+
+or if you want to use the old one (then make sure to also invoke the correct class in AIUI.py)
+> SnakeNN.py
+
+
 ## How it's made
 The core elements of the game are divided into
 > Apple.py
@@ -22,6 +30,12 @@ There is a config file where you can change things like speed, board size and st
 > SConfig.py
 
 ## Model:
+> SnakeNN.py
+I have created 2 models. the first one (SnakeNN.py) is creating simple neural network which shows directions relative to the snakes position, to say if it's free or not, and its distance to the apple. The output is a simple node providing a vote between -1 and 1, where -1 is turn left; 0 is no action (go straight); 1 is turn right.
+
+> SnakeNN2.py
+The second NN became more complex by additionally holding the distance to the apple for each relative direction and current direction. The output is a confidence vote for each relative direction [turn-left, go-straight, turn-right], where the highest confidence will be the prediction.
+
 ```
                input    hidden   output: vote for
 object-left         O
