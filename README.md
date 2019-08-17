@@ -11,8 +11,11 @@ Or let the AI play with following:
 ## How it's made
 The core elements of the game are divided into
 > Apple.py
+
 > Snake.py
+
 > SnakeGame.py
+
 > SVector.py
 
 There is a config file where you can change things like speed, board size and stuff
@@ -88,4 +91,8 @@ max steps 2347
 max score 88
 total of 1331939 steps
 
-
+average steps 676.14
+average score 30.51
+max steps 1635
+max score 68
+total of 1399553 steps
