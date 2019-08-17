@@ -3,31 +3,40 @@ Python - Retro snake game including deep learning AI
 
 ## How to run
 You can start the game to play with arrow keys by running:
-> python3 GameUI.py
+```
+python3 GameUI.py
+```
 
 Or let the AI play with following:
-> python3 AIUI.py
+```
+python3 AIUI.py
+```
 
 **NOTE**
-In order to run the AI you need to make sure to train your model. In the repo are my training set. if you want to create your own, just delete the files (*.td.*). For the first run, you need to comment the line to loadTDX, as it won't exist .. :-)
-> SnakeNN2.py
+In order to run the AI you need to make sure to train your model. In the repo are my training set. 
+If you want to create your own, just delete the files (*.td.*). For the first run, you need to comment the line to loadTDX, as it won't exist .. :-)
+```
+SnakeNN2.py
+```
 
 or if you want to use the old one (then make sure to also invoke the correct class in AIUI.py)
-> SnakeNN.py
-
+```
+SnakeNN.py
+```
 
 ## How it's made
 The core elements of the game are divided into
-> Apple.py
-
-> Snake.py
-
-> SnakeGame.py
-
-> SVector.py
+```
+Apple.py
+Snake.py
+SnakeGame.py
+SVector.py
+```
 
 There is a config file where you can change things like speed, board size and stuff
-> SConfig.py
+```
+SConfig.py
+```
 
 ## Models:
 I have created 2 models where the first is a rather simple neural network and the second is more complex and shows better performance.
