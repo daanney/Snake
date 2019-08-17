@@ -29,15 +29,15 @@ The core elements of the game are divided into
 There is a config file where you can change things like speed, board size and stuff
 > SConfig.py
 
-## Model:
-> SnakeNN.py
+## Models:
+I have created 2 models where the first is a rather simple neural network and the second is more complex and shows better performance.
 
-I have created 2 models. the first one (SnakeNN.py) is creating simple neural network which shows directions relative to the snakes position, to say if it's free or not, and its distance to the apple. The output is a simple node providing a vote between -1 and 1, where -1 is turn left; 0 is no action (go straight); 1 is turn right.
+### SnakeNN.py
+A simple neural network which shows directions relative to the snakes position, to say if it's free or not, and its distance to the apple. The output is a simple node providing a vote between -1 and 1, where -1 is turn left; 0 is no action (go straight); 1 is turn right.
 
 
-> SnakeNN2.py
-
-The second NN became more complex by additionally holding the distance to the apple for each relative direction and current direction. The output is a confidence vote for each relative direction [turn-left, go-straight, turn-right], where the highest confidence will be the prediction.
+### SnakeNN2.py
+A more complex model by additionally holding the distance to the apple for each relative direction and current direction. The output is a confidence vote for each relative direction [turn-left, go-straight, turn-right], where the highest confidence will be the prediction.
 
 ```
                input    hidden   output: vote for
